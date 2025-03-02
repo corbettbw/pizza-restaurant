@@ -7,42 +7,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
-    header {
-        background-color: #ff5733;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 24px;
-    }
-
-    nav {
-        display: flex;
-        gap: 20px;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 10px 15px;
-        background: #d32f2f;
-        border-radius: 8px;
-    }
-
-    nav a:hover {
-        background: #b71c1c;
-    }
-    header a {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      margin: 0 15px;
-    }
+    
     .content {
       margin-top: 20px;
     }
@@ -55,15 +20,9 @@
   </style>
 </head>
 <body>
-
-<header>
-  <h1><a href="<%= root_path %>">🍕 Pizza Restaurant</a></h1>
-  <nav>
-    <a href="<%= pizzas_path %>">🍕 Pizzas</a>
-    <a href="<%= toppings_path %>">🌶️ Toppings</a>
-  </nav>
-</header>
-
+  <%= render "layouts/header" %>
+  
+  <%= yield %>
 
   <div class="content">
     <h2>Welcome to the Best Pizza Restaurant!</h2>
