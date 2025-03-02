@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pizza Restaurant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    .content {
+      margin-top: 20px;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <%= render "layouts/header" %>
+  
+  <%= yield %>
+
+  <div class="content">
+    <h2>Welcome to the Best Pizza Restaurant!</h2>
+    
+    <a href="<%= pizzas_path %>">
+      <img src="https://source.unsplash.com/300x200/?pizza" alt="Pizza">
+    </a>
+    
+    <a href="<%= toppings_path %>">
+      <img src="https://source.unsplash.com/300x200/?toppings" alt="Toppings">
+    </a>
+
+    <p>Explore our <a href="<%= pizzas_path %>">Pizzas</a> and <a href="<%= toppings_path %>">Toppings</a>!</p>
+  </div>
+
+</body>
+</html>
