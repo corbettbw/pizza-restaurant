@@ -2,5 +2,27 @@
   <%= render "layouts/header" %>
   <%= yield %>
 
-  <h1>Toppings Page!</h1>
+<h1>Toppings</h1>
+
+<!-- Add New Topping button -->
+<div style="text-align: center; margin-bottom: 20px;">
+  <%= link_to "➕ Add New Topping", new_topping_path, class: "button add" %>
+</div>
+
+<!-- Toppings List -->
+<div class="toppings-container">
+  <% @toppings.each do |topping| %>
+    <div class="topping-bubble">
+      <span class="topping-emoji"><%= topping.emoji.presence || "🍕" %></span>
+      <span class="topping-name"><%= topping.name.capitalize %></span>
+      <div class="topping-actions">
+        <%= link_to "Edit", edit_topping_path(topping), class: "button edit-button" %>
+        <%= button_to "Delete", topping_path(topping), method: :delete, 
+          onclick: "return confirm('Are you sure you want to delete #{topping.name}?')", 
+          class: "button delete-button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 </body>
