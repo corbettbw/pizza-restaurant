@@ -1,0 +1,33 @@
+  <%= render "layouts/header" %>
+  <%= yield %>
+
+<h1>Add a New Topping</h1>
+
+<%= form_with model: @topping, local: true do |form| %>
+  <% if @topping.errors.any? %>
+    <div class="error-messages">
+      <h2><%= pluralize(@topping.errors.count, "error") %> prevented this topping from being saved:</h2>
+      <ul>
+        <% @topping.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :emoji %>
+    <%= form.text_field :emoji, placeholder: "🍕 (optional)" %>
+  </div>
+
+  <div>
+    <%= form.submit "Add Topping" %>
+  </div>
+<% end %>
+
+<%= link_to "Back to Toppings", toppings_path %>

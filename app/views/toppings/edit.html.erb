@@ -1,0 +1,36 @@
+<body>
+  <%= render "layouts/header" %>
+  <%= yield %>
+    <div class="edit-form-container">
+        <h1>Edit Topping</h1>
+
+        <% if @topping.errors.any? %>
+            <div class="error-messages">
+            <h2><%= pluralize(@topping.errors.count, "error") %> prevented this topping from being saved:</h2>
+            <ul>
+                <% @topping.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </ul>
+            </div>
+        <% end %>
+
+        <%= form_with model: @topping, local: true do |form| %>
+            <div class="form-group">
+            <%= form.label :name %>
+            <%= form.text_field :name, required: true %>
+            </div>
+
+            <div class="form-group">
+            <%= form.label :emoji %>
+            <%= form.text_field :emoji %>
+            </div>
+
+            <div class="form-actions">
+            <%= form.submit "Update Topping", class: "update-button" %>
+            <%= link_to "Back to Toppings", toppings_path, class: "cancel-link" %>
+            </div>
+        <% end %>
+    </div>
+
+</body>
