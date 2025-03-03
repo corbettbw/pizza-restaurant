@@ -1,0 +1,31 @@
+<%= form_with model: pizza, local: true do |form| %>
+  <% if pizza.errors.any? %>
+    <div class="error-messages">
+      <h2><%= pluralize(pizza.errors.count, "error") %> prevented this pizza from being saved:</h2>
+      <ul>
+        <% pizza.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, "Pizza Name:", class: "form-label" %>
+    <%= form.text_field :name, required: true, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :topping_ids, "Select Toppings:", class: "form-label" %>
+    <%= form.collection_check_boxes :topping_ids, Topping.all, :id, :name do |cb| %>
+      <div class="checkbox-group">
+        <%= cb.check_box(class: "form-checkbox") %> <%= cb.label(class: "checkbox-label") %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit "Save Pizza", class: "submit-button" %>
+    <%= link_to "Cancel", pizzas_path, class: "cancel-button" %>
+  </div>
+<% end %>
