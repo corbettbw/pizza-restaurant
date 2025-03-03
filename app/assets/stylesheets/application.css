@@ -6,34 +6,34 @@ body {
     margin: 0;
     padding: 20px;
     text-align: center;
-  }
+}
   
-  h1 {
+h1 {
     font-size: 2.5rem;
     color: #222;
     margin-bottom: 20px;
-  }
+}
   
-  a {
+a {
     text-decoration: none;
     font-weight: bold;
-  }
+}
   
-  a:hover {
+a:hover {
     text-decoration: underline;
-  }
+}
   
-  /* ======= Toppings List Styles ======= */
-  
-  .toppings-container {
+/* ======= Toppings List Styles ======= */
+
+.toppings-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     padding: 20px;
-  }
+}
   
-  .topping-bubble {
+.topping-bubble {
     background-color: #f8f9fa;
     border-radius: 20px;
     padding: 15px;
@@ -43,23 +43,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
   
-  .topping-bubble .topping-name {
+.topping-bubble .topping-name {
     font-size: 18px;
     font-weight: bold;
     color: #222;
     margin: 8px 0;
-  }
+}
   
-  .topping-bubble .topping-emoji {
+.topping-bubble .topping-emoji {
     font-size: 30px;
     margin-bottom: 8px;
-  }
-  
-  /* ======= Buttons ======= */
-  
-  .button {
+}
+
+/* ======= Buttons ======= */
+
+.button {
     display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
@@ -69,27 +69,27 @@ body {
     border: none;
     transition: background-color 0.2s;
     font-size: 14px;
-  }
+}
   
-  .edit-button {
+.edit-button {
     background-color: #007bff;
     color: white;
-  }
+}
   
-  .delete-button {
+.delete-button {
     background-color: #dc3545;
     color: white;
-  }
+}
   
-  .edit-button:hover {
+.edit-button:hover {
     background-color: #0056b3;
-  }
+}
   
-  .delete-button:hover {
+.delete-button:hover {
     background-color: #a71d2a;
-  }
+}
   
-  .new-topping-button {
+.new-topping-button {
     background-color: #5a189a;
     color: white;
     font-size: 16px;
@@ -97,98 +97,24 @@ body {
     border-radius: 8px;
     text-decoration: none;
     margin-bottom: 20px;
-  }
+}
   
-  .new-topping-button:hover {
+.new-topping-button:hover {
     background-color: #3c096c;
-  }
-  
-  /* ======= Button Layout in Topping Bubble ======= */
-  
-  .topping-actions {
+}
+
+/* ======= Button Layout in Topping Bubble ======= */
+
+.topping-actions {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
-  }
-  
-  /* ======= Form Styles ======= */
-  
-  .topping-form {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    margin: 20px auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .form-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .submit-button {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .cancel-button {
-    background-color: #6c757d;
-    color: white;
-  }
-  
-  .submit-button:hover {
-    background-color: #218838;
-  }
-  
-  .cancel-button:hover {
-    background-color: #545b62;
-  }
-  
-  /* ======= Error Messages ======= */
-  
-  .error-messages {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .error-messages h2 {
-    margin-top: 0;
-  }
-  
-  .error-messages ul {
-    padding-left: 20px;
-    margin: 0;
-  }
-/* ======= Edit/Update Topping Form ======= */
+}
 
-.edit-form-container {
+/* ======= Consolidated New/Edit Topping Form Styles ======= */
+
+.topping-form-container {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
@@ -199,44 +125,44 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .edit-form-container h1 {
+}
+
+.topping-form-container h1 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 15px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     width: 100%;
     text-align: left;
     margin-bottom: 15px;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #444;
-  }
-  
-  .form-group input {
+}
+
+.form-group input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
-  }
-  
-  .form-actions {
+}
+
+.form-actions {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
-  }
-  
-  .update-button {
+}
+
+.submit-button {
     background-color: #28a745;
     color: white;
     font-size: 16px;
@@ -246,13 +172,13 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.2s;
-  }
-  
-  .update-button:hover {
+}
+
+.submit-button:hover {
     background-color: #218838;
-  }
-  
-  .cancel-link {
+}
+
+.cancel-button {
     background-color: #6c757d;
     color: white;
     font-size: 16px;
@@ -260,9 +186,28 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .cancel-link:hover {
+}
+
+.cancel-button:hover {
     background-color: #545b62;
-  }
-    
+}
+
+/* ======= Error Messages ======= */
+
+.error-messages {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.error-messages h2 {
+    margin-top: 0;
+}
+
+.error-messages ul {
+    padding-left: 20px;
+    margin: 0;
+}
