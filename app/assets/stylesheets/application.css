@@ -408,3 +408,10 @@ a:hover {
 .pizza-card-buttons .delete-button:hover {
     background-color: #a71d2a;
 }
+
+.emoji-link {
+    font-size: 5rem; /* Adjust size as needed */
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+}
