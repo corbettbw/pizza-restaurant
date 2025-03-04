@@ -1,83 +1,88 @@
-# README
-*   Ruby Version:
+*   *   Ruby Version:
+        
     
-
-*   3.4.2
+    *   3.4.2
+        
     
-
-*   Rails Version:
+    *   Rails Version:
+        
     
-
-*   8.0.1
+    *   8.0.1
+        
     
-
-*   Postgresql Version:
+    *   Postgresql Version:
+        
     
-
-*   14.17
+    *   14.17
+        
+    *   Make sure postgresql is running when you start the application
+        
     
-*   Make sure postgresql is running when you start the application
+    *   Configuration and Deployment:
+        
     
-
-*   Configuration and Deployment:
+    *   Live version of the app can be found at:
+        
     
-
-*   The app defaults to development when running local
+    *   [https://strongmind-pizza-restaurant-50abb8b25dc5.herokuapp.com/](https://strongmind-pizza-restaurant-50abb8b25dc5.herokuapp.com/)
+        
     
-
-*   This means you can start the app by running \`rails s\` or \`rails server\`
+    *   The app defaults to development when running local
+        
     
-
-*   Heroku runs the app in production by default
+    *   This means you can start the app by running \`rails s\` or \`rails server\`
+        
     
-
-*   When interacting with Heroku, use the format:
+    *   Heroku runs the app in production by default
+        
     
-
-*   \`heroku run <command>\`
+    *   When interacting with Heroku, use the format:
+        
     
-
-*   Example usage:
+    *   \`heroku run <command>\`
+        
     
-
-*   \`heroku run rails c\`
+    *   Example usage:
+        
     
-*   This allows you to interact with the server while the app is running
+    *   \`heroku run rails c\`
+        
+    *   This allows you to interact with the server while the app is running
+        
     
-
-*   Use the command format:
+    *   Use the command format:
+        
     
-
-*   \`RAILS\_ENV=<environment> rails server\`
+    *   \`RAILS\_ENV=<environment> rails server\`
+        
     
-
-*   Example usage:
+    *   Example usage:
+        
     
-
-*   \`RAILS\_ENV=development rails server\`
+    *   \`RAILS\_ENV=development rails server\`
+        
     
-
-*   You can also access the console by replacing “server” with “console” in the command line
+    *   You can also access the console by replacing “server” with “console” in the command line
+        
     
-
-*   How to run the test suite:
+    *   How to run the test suite:
+        
     
-
-*   To run all the tests, use the command \`rspec\`
+    *   To run all the tests, use the command \`rspec\`
+        
+    *   To run specific tests, add the location of the test file after \`rspec\` using this format:
+        
     
-*   To run specific tests, add the location of the test file after \`rspec\` using this format:
+    *   \`rspec <file location>\`
+        
+    *   For example:
+        
     
-
-*   \`rspec <file location>\`
+    *   \`rspec spec/models/pizza\_spec.rb\`
+        
     
-*   For example:
+    My Thought Process
     
-
-*   \`rspec spec/models/pizza\_spec.rb\`
+    My philosophy when approaching this challenge was to get the simplest possible thing to work, and then build on that. I chose the most up-to-date, stable, versions of ruby, rails, etc, that Heroku uses. I used database tables for toppings and pizzas, and implemented the standard CRUD operations to manage both. Because many pizzas have many toppings, I chose to have a many-to-many table, so that removing a topping would automatically remove it from each of the pizzas that had that as an ingredient. My approach to testing was to make sure that the logic worked in the controllers, as well as on the request side. As such, I have test coverage of the main features.
     
-
-  
-
-My Thought Process
-
-My philosophy when approaching this challenge was to get the simplest possible thing to work, and then build on that. I chose the most up-to-date, stable, versions of ruby, rails, etc, that Heroku uses. I used database tables for toppings and pizzas, and implemented the standard CRUD operations to manage both. Because many pizzas have many toppings, I chose to have a many-to-many table, so that removing a topping would automatically remove it from each of the pizzas that had that as an ingredient. My approach to testing was to make sure that the logic worked in the controllers, as well as on the request side. As such, I have test coverage of the main features.
+*
